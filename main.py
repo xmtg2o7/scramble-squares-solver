@@ -1,6 +1,6 @@
 file = open(r"pc_list.txt", "r")
-imported_pcs = file.read().replace("\n", ", ").split(", ")
-keys = ['1a', 1, '1b', -1, '2a', 17, '2b', -17, '3a', 69, '3b', -69, '4a', 277, '4b', -277]
+imported_pcs = file.read().replace("\n", ", ").split(", ") #change text from readable to list
+keys = ['1a', 1, '1b', -1, '2a', 17, '2b', -17, '3a', 69, '3b', -69, '4a', 277, '4b', -277] #used to create unique sums for list comprehension
 pc_counter = 0
 
 pcs = [[], [], [], [], [], [], [], [], []]
@@ -15,6 +15,7 @@ for i, pc in enumerate(imported_pcs):
         print("Unsupported Format")
         break
 
+pc_counter = 0
 rotations = 0
 i = 0
 
@@ -23,10 +24,10 @@ one_tempList = []
 two_tempList = []
 
 x = 0
-
+answer = []
 
 def trial_error(x):
-    global rotations, combinations, two_tempList, i
+    global rotations, combinations, two_tempList, i, pc_counter, keys
     if x == 0:
         for p in pcs:
             while rotations < 4:
@@ -179,8 +180,15 @@ def trial_error(x):
                         i += 1
                         pass
             i = 0
-        for combo in combinations:
-            print(f'Successful combo using: {combo}')
+        for a, combo in enumerate(combinations):
+            for b, com in enumerate(combo):
+                for e, c in enumerate(com):
+                    if c in keys:
+                        combinations[a][b][e] = keys[keys.index(c) - 1]
+                    else:
+                        print("Unsupported Format")
+                        break
+            print(combo)
 
 
 trial_error(x)
