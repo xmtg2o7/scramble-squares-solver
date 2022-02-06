@@ -12,4 +12,10 @@ In the example, I recreated the pieces using "1a" if it was the front part of th
 
 The above example would be listed as 1b, 1a, 4b, 2a. The order needs to be clockwise in order for the puzzle to be solvable. 
 
+The solution is based on putting the pieces in the following order:
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/98617263/152691743-39889066-a68d-4a3e-b423-4a1548877537.png" />
+</p>
+
 ***Disclaimer*** As of 2/5/22, I am currently still working on this. I don't plan on spending more than a month on it. If the code is older than one month and this disclaimer is still up, I have abandonded this project. 
