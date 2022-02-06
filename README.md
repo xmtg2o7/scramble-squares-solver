@@ -10,4 +10,6 @@ In the example, I recreated the pieces using "1a" if it was the front part of th
   <img src="https://user-images.githubusercontent.com/98617263/152667380-9d9bbea3-1c57-4fe4-b464-380bb15c6bac.png" />
 </p>
 
+The above example would be listed as 1b, 1a, 4b, 2a. The order needs to be clockwise in order for the puzzle to be solvable. 
+
 ***Disclaimer*** As of 2/5/22, I am currently still working on this. I don't plan on spending more than a month on it. If the code is older than one month and this disclaimer is still up, I have abandonded this project. 
